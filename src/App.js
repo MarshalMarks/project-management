@@ -1,11 +1,19 @@
 import './App.css';
 
+import Login from './components/Login';
+import Register from './components/Register';
+import Dashboard from './components/Dashboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Project Management</h1>
-      <p>This is the front-end of our project management application.</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
